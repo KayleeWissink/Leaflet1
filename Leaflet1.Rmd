@@ -1,0 +1,27 @@
+---
+title: "Leaflet"
+author: "Kaylee Wissink"
+date: "March 8, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r cars}
+library(leaflet)
+my_map <- leaflet() %>% 
+  addTiles()
+my_map
+```
+
+```{r,}
+library(leaflet)
+
+my_map <- my_map %>% 
+  addMarkers(lat=44.976525, lng=-93.224546, 
+              popup="TCF Bank Stadium")
+my_map
+```
